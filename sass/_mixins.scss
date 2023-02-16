@@ -1,0 +1,39 @@
+@mixin centerItems {
+    display: flex;
+    align-items: center;
+}
+
+@mixin heading-one {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+}
+
+@mixin heading-two {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14px;
+}
+
+@mixin heading-three {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.79px;
+}
+
+@mixin heading-three {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07px;
+}
+
+@mixin text {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+@mixin for-tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
