@@ -13,6 +13,25 @@
 html,
 body {
     font-family: $font;
+    transition: 0.5s ease;
+    z-index: 50;
+    overflow-x: hidden;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+html.lock {
+    overflow: hidden;
+}
+
+.body-darken {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
 }
 
 h1,
@@ -27,19 +46,32 @@ a {
     max-width: 1190px;
     margin: 0 auto;
     padding: 0 40px;
+    position: relative;
 }
 
 .btn {
     padding: 12px 37px;
-    color: #FFF;
+    color: #fff;
     border: 3px solid $yellow;
     background-color: $yellow;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
 .btn:hover {
     background-color: transparent;
-    color: $yellow
+    color: $yellow;
 }
 
-@import './all-bocks/all-blocks';
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: url('../images/hero-img@2x.jpg');
+    }
+}
+
+
+@import "./all-blocks/all-blocks";

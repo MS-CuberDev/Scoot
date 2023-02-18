@@ -1,0 +1,75 @@
+#order {
+    padding-top: 160px;
+}
+
+.order {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    @include for-order {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &-line {
+        display: inline-block;
+        position: absolute;
+        width: 1050px;
+        height: 15px;
+        background-color: $light-grey;
+        right: 0;
+        z-index: -1;
+
+        @include for-order {
+            transform: rotateZ(90deg);
+            top: -460%;
+            left: -478px;
+            width: 1050px;
+        }
+
+        @include for-order-mobile {
+            display: none;
+        }
+    }
+
+    &__card {
+        position: relative;
+
+        @include for-order {
+            display: flex;
+            align-items: center;
+            max-width: 575px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        @include for-order-mobile {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-img {
+            display: flex;
+            width: 96px;
+            height: 96px;
+            background-color: $yellow;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        &-title {
+            @include heading-four();
+            padding: 40px 0 27px;
+            color: $dark-navy;
+        }
+
+        &-description {
+            @include text();
+            color: $dim-grey;
+            max-width: 400px;
+        }
+    }
+}

@@ -21,7 +21,7 @@
     letter-spacing: -1.79px;
 }
 
-@mixin heading-three {
+@mixin heading-four {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -1.07px;
@@ -32,8 +32,56 @@
     line-height: 25px;
 }
 
+@mixin for-mobile {
+    @media screen and (max-width: 740px) {
+        @content;
+    }
+}
+
+@mixin for-hero {
+    @media screen and (max-width: 898px) {
+        @content;
+    }
+}
+
+@mixin for-order {
+    @media screen and (max-width: 890px) {
+        @content;
+    }
+}
+
+@mixin for-order-mobile {
+    @media screen and (max-width: 598px) {
+        @content;
+    }
+}
+
 @mixin for-tablet {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-download {
+    @media screen and (max-width: 868px) {
+        @content;
+    }
+}
+
+@mixin for-footer {
+    @media screen and (max-width: 660px) {
+        @content;
+    }
+}
+
+@mixin for-useful-img {
+    @media screen and (max-width: 535px) {
+        @content;
+    }
+}
+
+@mixin for-hero-arrow {
+    @media screen and (max-width: 557px) {
         @content;
     }
 }

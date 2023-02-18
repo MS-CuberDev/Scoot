@@ -1,0 +1,205 @@
+header {
+    position: relative;
+    z-index: 20;
+}
+
+nav {
+    padding: 22px 0;
+    background-color: #ffffff;
+    z-index: 100;
+    width: 100%;
+    transition: linear 0.5s;
+}
+
+nav.scroll-nav {
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    position: fixed;
+    transition: linear 0.5s;
+}
+
+.menu {
+    @include centerItems();
+    column-gap: 60px;
+
+    &__burger {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        @include for-mobile {
+            display: flex;
+        }
+
+        &-line {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background-color: $yellow;
+            transition: 0.5s ease;
+        }
+
+        &-active {
+            .menu__burger-line:nth-child(1) {
+                transform: rotateZ(45deg);
+            }
+
+            .menu__burger-line:nth-child(2) {
+                display: none;
+            }
+
+            .menu__burger-line:nth-child(3) {
+                position: absolute;
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+
+    &__logo {
+        @include for-mobile {
+            margin: 0 auto;
+            padding-right: 15%;
+        }
+    }
+
+    &__bar {
+        @include centerItems();
+        justify-content: space-between;
+        width: 100%;
+
+        @include for-mobile {
+            position: absolute;
+            flex-direction: column;
+            top: 175%;
+            height: 93vh;
+            width: 65%;
+            left: -100%;
+            background-color: #333a44;
+            padding: 64px 0 24px 32px;
+            transition: 0.5s ease;
+        }
+
+        .btn {
+            @include for-mobile {
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+        }
+
+        &.menu__bar-open {
+            left: 0;
+        }
+    }
+
+    &__ul {
+        @include centerItems();
+        column-gap: 40px;
+
+        @include for-mobile {
+            flex-direction: column;
+            gap: 25px;
+            align-items: flex-start;
+            margin-right: auto;
+        }
+
+        &-link {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: $dim-grey;
+            transition: 0.2s ease;
+
+            @include for-mobile {
+                color: $light-grey;
+                text-align: left;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+
+        &-link:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    padding: 250px 0 152px;
+    background: #303c5abf url("../images/hero-img.jpg") center;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-hero {
+        text-align: center;
+        padding-top: 190px;
+        padding-bottom: 210px;
+    }
+
+    &__title {
+        @include heading-one();
+        color: #fff;
+        max-width: 500px;
+
+        @include for-hero {
+            margin: 0 auto;
+        }
+    }
+
+    &__lines {
+        display: flex;
+    }
+
+    &__line {
+        position: absolute;
+        top: 190px;
+        display: block;
+        height: 15px;
+        width: 20%;
+        background-color: $yellow;
+        left: -15%;
+
+        @include for-hero {
+            display: none;
+        }
+    }
+
+    &__arrow {
+        padding-top: 70px;
+        padding-left: 50px;
+
+        @include for-hero {
+            position: absolute;
+            bottom: -60%;
+            right: 50%;
+        }
+
+        @include for-hero-arrow {
+            position: absolute;
+            bottom: -40%;
+            right: 55%;
+        }
+    }
+
+    &__text {
+        padding-left: 95px;
+
+        @include for-hero {
+            padding-left: 0;
+            margin: 0 auto;
+        }
+
+        &-description {
+            @include text();
+            color: #fff;
+            max-width: 405px;
+            padding: 40px 0;
+
+            @include for-hero {
+                margin: 0 auto;
+            }
+        }
+    }
+}

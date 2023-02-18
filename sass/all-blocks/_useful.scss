@@ -1,0 +1,121 @@
+.useful {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    @include for-tablet {
+        &__flex:nth-child(1),
+        &__flex:nth-child(3) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        &__flex:nth-child(2) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__flex {
+        @include centerItems();
+        justify-content: space-between;
+        gap: 80px;
+        position: relative;
+
+        @include for-tablet {
+            h2 {
+                margin: 0 auto;
+            }
+        }
+
+        h2 {
+            @include heading-two();
+            color: $dark-navy;
+            max-width: 445px;
+        }
+
+        p {
+            @include text();
+            color: $dim-grey;
+            padding: 24px 0 54px;
+        }
+
+        &-images {
+            &-img {
+                border-radius: 50%;
+
+                @include for-useful-img {
+                    max-width: 445px;
+                    width: 100%;
+                }
+            }
+
+            &-first,
+            &-second,
+            &-third {
+                position: absolute;
+            }
+
+            &-first {
+                right: -205px;
+                top: 300px;
+
+                @include for-tablet {
+                    right: -40px;
+                }
+
+                @include for-mobile {
+                    left: 50px;
+                    top: 200px;
+                }
+            }
+
+            &-second {
+                left: -205px;
+                top: 0;
+
+                @include for-tablet {
+                    left: -40px;
+                    right: 115px;
+                }
+            }
+
+            &-third {
+                transform: rotateY(180deg);
+                right: -205px;
+                top: 50px;
+
+                @include for-tablet {
+                    right: -40px;
+                }
+            }
+
+            &-circle {
+                position: absolute;
+                right: -205px;
+
+                @include for-tablet {
+                    right: -40px;
+                }
+
+                @include for-mobile {
+                    display: none;
+                }
+
+                &-left {
+                    position: absolute;
+                    left: -205px;
+
+                    @include for-tablet {
+                        left: -40px;
+                    }
+
+                    @include for-mobile {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
