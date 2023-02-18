@@ -1,0 +1,41 @@
+#download {
+    background-color: $dark-navy;
+    margin-top: 120px;
+    position: relative;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 102px 0;
+
+    &__circles {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    @include for-download {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        @include heading-two();
+        color: #FFF;
+        max-width: 415px;
+    }
+
+    &__right {
+        display: flex;
+        gap: 10px;
+        
+        img {
+            @include for-order-mobile {
+                max-width: 90%;
+            }
+        }
+    }
+}

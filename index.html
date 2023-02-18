@@ -1,12 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scoot</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav" class="scroll-nav">
+        <div class="container">
+          <div class="menu">
+            <div class="menu__burger" onclick="openMenuBar()">
+              <span class="menu__burger-line"></span>
+              <span class="menu__burger-line"></span>
+              <span class="menu__burger-line"></span>
+            </div>
+            <img
+              class="menu__logo"
+              src="./images/icons/scoot.svg"
+              alt="Scoot logo"
+            />
+            <div class="menu__bar">
+              <ul class="menu__ul">
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">About</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Location</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Careers</a>
+                </li>
+              </ul>
+              <a href="#" class="btn">Get Scootin</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div onclick="menuBarClose()" id="bodyDarken"></div>
+      <div id="hero" class="hero">
+        <div class="container">
+          <h1 class="hero__title">Scooter sharing made simple</h1>
+          <div class="hero__text">
+            <div class="hero__lines">
+              <span class="hero__line"></span>
+              <p class="hero__text-description">
+                Scoot takes the hassle out of urban mobility. Our bikes are
+                placed in convenient locations in each of our cities. Use our
+                app to locate the nearest bike, unlock it with a tap, and you’re
+                away!
+              </p>
+              <img
+                class="hero__arrow"
+                src="./images/hero-line2.svg"
+                alt="Arrow line"
+              />
+            </div>
+            <a href="#" class="btn">Get Scootin</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="order">
+        <div class="container">
+          <div class="order">
+            <div class="order__card">
+              <div class="order__card-img">
+                <img src="./images/icons/phone.svg" alt="Phone illustration" />
+              </div>
+              <div class="order__card-text">
+                <h4 class="order__card-title">Locate with app</h4>
+                <p class="order__card-description">
+                  Use the app to find the nearest scooter to you. We are
+                  continuously placing scooters in the areas with most demand,
+                  so one should never be too far away.
+                </p>
+              </div>
+            </div>
+            <div class="order__card">
+              <div class="order__card-img">
+                <img
+                  src="./images/icons/scooter.svg"
+                  alt="Scooter illustration"
+                />
+              </div>
+              <div class="order__card-text">
+                <h4 class="order__card-title">Pick your scooter</h4>
+                <p class="order__card-description">
+                  We show the most important info for the scooters closest to
+                  you. So you know how much charge they have left and can see
+                  roughly how much it will cost.
+                </p>
+              </div>
+            </div>
+            <div class="order__card">
+              <div class="order__card-img">
+                <span class="order-line"></span>
+                <img
+                  src="./images/icons/postman.svg"
+                  alt="Postman illustration"
+                />
+              </div>
+              <div class="order__card-text">
+                <h4 class="order__card-title">Enjoy the ride</h4>
+                <p class="order__card-description">
+                  Scan the QR code and the bike will unlock. Retract the cable
+                  lock, put on a helmet, and you’re off! Always lock bikes away
+                  from walkways and accessibility ramps.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container useful-container">
+          <div class="useful">
+            <div class="useful__flex">
+              <div class="usrful__flex-text">
+                <h2>Easy to use riding telemetry</h2>
+                <p>
+                  The Scoot app is available with riding telemetry. This means
+                  it can show you your average speed, how long you've been using
+                  the scooter, your traveling distance, and many more things all
+                  in an easy to use app.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+              <div class="useful__flex-images">
+                <img
+                  src="./images/easy-riding.jpg"
+                  alt="Easy riding image"
+                  srcset="
+                    ./images/easy-riding@2x.jpg 2x,
+                    ./images/easy-riding.jpg    1x
+                  "
+                  class="useful__flex-images-img"
+                />
+                <img
+                  src="./images/useful-circle.svg"
+                  alt="Circle"
+                  class="useful__flex-images-circle"
+                />
+                <img
+                  src="./images/arrow-long.svg"
+                  alt=""
+                  class="useful__flex-images-first"
+                />
+              </div>
+            </div>
+
+            <div class="useful__flex">
+              <div class="useful__flex-images">
+                <img
+                  src="./images/city.jpg"
+                  alt="Easy riding image"
+                  srcset="./images/city@2x.jpg 2x, ./images/city.jpg 1x"
+                  class="useful__flex-images-img"
+                />
+                <img
+                  src="./images/useful-circle-left.svg"
+                  alt="Circle"
+                  class="useful__flex-images-circle-left"
+                />
+                <img
+                  src="./images/arrow-long-left.svg"
+                  alt=""
+                  class="useful__flex-images-second"
+                />
+              </div>
+              <div class="usrful__flex-text">
+                <h2>Coming to a city near you</h2>
+                <p>
+                  Scoot is available in 4 major cities so far. We’re expanding
+                  rapidly, so be sure to let us know if you want to see us in
+                  your hometown. We’re aiming to let our scooters loose on 23
+                  cities over the coming year.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+
+            <div class="useful__flex">
+              <div class="usrful__flex-text">
+                <h2>Zero hassle payments</h2>
+                <p>
+                  Our payment is as easy as one two three. We accept most credit
+                  cards and debit cards. You can also link your PayPal account
+                  inside the app. Need to pay later? No worries! You can defer
+                  payment for up to a month.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+              <div class="useful__flex-images">
+                <img
+                  src="./images/wallet.jpg"
+                  alt="Wallet image"
+                  srcset="./images/wallet@2x.jpg 2x, ./images/wallet.jpg 1x"
+                  class="useful__flex-images-img"
+                />
+                <img
+                  src="./images/useful-circle.svg"
+                  alt="Circle"
+                  class="useful__flex-images-circle"
+                />
+
+                <img
+                  src="./images/arrow-long-left.svg"
+                  alt=""
+                  class="useful__flex-images-third"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download">
+        <div class="container">
+          <div class="download">
+            <div class="download__left">
+              <h2>Sign up and Scoot off today</h2>
+            </div>
+            <div class="download__right">
+              <a href="#">
+                <img src="./images/appstore.svg" alt="AppStore" />
+              </a>
+              <a href="#">
+                <img src="./images/google-play.svg" alt="Google Play" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <img
+          class="download__circles"
+          src="./images/download-circles.svg"
+          alt="Circles"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer__menu">
+          <img
+            class="footer__menu-logo"
+            src="./images/icons/logo-light.svg"
+            alt="Scoot logo"
+          />
+          <div class="footer__menu-bar">
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">About</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Location</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Careers</a>
+              </li>
+            </ul>
+            <div class="footer__menu-contacts">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
 </html>

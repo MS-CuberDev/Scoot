@@ -1,0 +1,62 @@
+footer {
+    padding: 35px 0;
+    background-color: #333a44;
+}
+
+.footer__menu {
+    @include centerItems();
+    column-gap: 60px;
+
+    @include for-footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &-bar {
+        @include centerItems();
+        justify-content: space-between;
+        width: 100%;
+
+        @include for-footer {
+            flex-direction: column;
+            gap: 90px;
+        }
+    }
+
+    &-ul {
+        @include centerItems();
+        gap: 40px;
+
+        @include for-footer {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-link {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: $dim-grey;
+            transition: 0.2s ease;
+        }
+
+        &-link:hover {
+            color: $yellow;
+        }
+    }
+
+    &-contacts {
+        display: flex;
+        gap: 24px;
+
+        a {
+            font-size: 24px;
+            color: $yellow;
+            transition: 0.2s ease;
+        }
+
+        a:hover {
+            color: $light-grey;
+        }
+    }
+}
