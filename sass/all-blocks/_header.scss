@@ -6,20 +6,19 @@ header {
 nav {
     padding: 22px 0;
     background-color: #ffffff;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
-    transition: linear 0.5s;
-}
-
-nav.scroll-nav {
-    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
     position: fixed;
-    transition: linear 0.5s;
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
 }
 
 .menu {
     @include centerItems();
     column-gap: 60px;
+
+    @include for-mobile {
+        justify-content: center;
+    }
 
     &__burger {
         position: relative;
@@ -30,6 +29,9 @@ nav.scroll-nav {
 
         @include for-mobile {
             display: flex;
+            position: absolute;
+            left: 40px;
+            z-index: 90;
         }
 
         &-line {
@@ -59,7 +61,7 @@ nav.scroll-nav {
     &__logo {
         @include for-mobile {
             margin: 0 auto;
-            padding-right: 15%;
+            z-index: 90;
         }
     }
 
@@ -71,10 +73,11 @@ nav.scroll-nav {
         @include for-mobile {
             position: absolute;
             flex-direction: column;
-            top: 175%;
+            top: 162%;
             height: 93vh;
             width: 65%;
             left: -100%;
+            z-index: 90;
             background-color: #333a44;
             padding: 64px 0 24px 32px;
             transition: 0.5s ease;
@@ -83,7 +86,7 @@ nav.scroll-nav {
         .btn {
             @include for-mobile {
                 margin-right: auto;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
         }
 
@@ -200,6 +203,39 @@ nav.scroll-nav {
             @include for-hero {
                 margin: 0 auto;
             }
+        }
+    }
+}
+
+.about-hero {
+    background-image: url("../images/about-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 168px 0 72px;
+
+    &__flex {
+        @include centerItems();
+        justify-content: space-between;
+
+        &-title {
+            @include heading-one();
+            color: #fff;
+            z-index: 10;
+
+            @include for-footer {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        right: 0px;
+        bottom: 72px;
+
+        @include for-footer {
+            display: none;
         }
     }
 }

@@ -85,3 +85,9 @@
         @content;
     }
 }
+
+@mixin for-values {
+    @media screen and (max-width: 810px) {
+        @content;
+    }
+}
