@@ -1,0 +1,33 @@
+.apply {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    gap: 25px;
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 40px;
+        background-color: $snow;
+
+        @include for-useful-img {
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+        }
+
+        &-left {
+            &-title {
+                @include heading-four();
+                color: $dark-navy;
+                padding-bottom: 8px;
+            }
+
+            &-item {
+                @include text();
+                color: $dark-navy;
+            }
+        }
+    }
+}

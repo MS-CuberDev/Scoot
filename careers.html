@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoot | Careers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div class="container">
+          <div class="menu">
+            <div class="menu__burger" onclick="openMenuBar()">
+              <span class="menu__burger-line"></span>
+              <span class="menu__burger-line"></span>
+              <span class="menu__burger-line"></span>
+            </div>
+            <a href="./index.html">
+              <img
+                class="menu__logo"
+                src="./images/icons/scoot.svg"
+                alt="Scoot logo"
+              />
+            </a>
+            <div class="menu__bar">
+              <ul class="menu__ul">
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="./about.html">About</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Location</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Careers</a>
+                </li>
+              </ul>
+              <a href="#" class="btn">Get Scootin</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div onclick="menuBarClose()" id="bodyDarken"></div>
+      <div class="about-hero careers-hero">
+        <div class="container">
+          <div class="about-hero__flex">
+            <h1 class="about-hero__flex-title">Careers</h1>
+          </div>
+        </div>
+        <img src="./images/slider-circles.svg" alt="Slider" />
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container useful-container">
+          <div class="useful">
+            <div class="useful__flex">
+              <div class="usrful__flex-text">
+                <h2>Mobility for the digital era</h2>
+                <p>
+                  Getting around should be simple (and even fun!) for everyone.
+                  We embrace technology to provide low cost, smart access to
+                  scooters at your fingertips.
+                </p>
+              </div>
+              <div class="useful__flex-images">
+                <img
+                  src="./images/careers-useful.jpg"
+                  alt="Easy riding image"
+                  srcset="
+                    ./images/careers-useful@2x.jpg 2x,
+                    ./images/careers-useful.jpg    1x
+                  "
+                  class="useful__flex-images-img careers-useful-img"
+                />
+                <img
+                  src="./images/useful-circle.svg"
+                  alt="Circle"
+                  class="useful__flex-images-circle"
+                />
+                <img
+                  src="./images/arrow-long.svg"
+                  alt=""
+                  class="useful__flex-images-first about-arrow-long"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="values">
+        <div class="container">
+          <h2 class="values__title">Our values</h2>
+          <div class="values">
+            <div class="values__card">
+              <div class="values__card-img">
+                <img
+                  src="./images/values-1.jpg"
+                  alt="Value first"
+                  srcset="./images/values-1@2x.jpg 2x, ./images/values-1.jpg 1x"
+                />
+                <span>01</span>
+              </div>
+              <h4 class="values__card-title">Our tech</h4>
+              <p class="values__card-description">
+                We’re using cutting edge technology to drive accessible urban
+                transportation forward. Our fully electric scooters are a joy to
+                ride!
+              </p>
+            </div>
+            <div class="values__card">
+              <div class="values__card-img">
+                <img
+                  src="./images/values-2.jpg"
+                  alt="Value second"
+                  srcset="./images/values-2@2x.jpg 2x, ./images/values-2.jpg 1x"
+                />
+                <span>02</span>
+              </div>
+              <h4 class="values__card-title">Our integrity</h4>
+              <p class="values__card-description">
+                We are fully committed to deliver a great yet safe, sustainable
+                micro-mobility experience in every city we serve.
+              </p>
+            </div>
+            <div class="values__card">
+              <div class="values__card-img">
+                <img
+                  src="./images/values-3.jpg"
+                  alt="Value third"
+                  srcset="./images/values-3@2x.jpg 2x, ./images/values-3.jpg 1x"
+                />
+                <span>03</span>
+              </div>
+              <h4 class="values__card-title">Our community</h4>
+              <p class="values__card-description">
+                We support every community we serve. All workers are paid a
+                living wage based on their location and are Scoot employees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="apply">
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">General Manager</h4>
+                <span class="apply__card-left-item">Jakarta, Indonesia</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">UI/UX Designer</h4>
+                <span class="apply__card-left-item">Yokohama, Japan</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">Blog Content Copywriter</h4>
+                <span class="apply__card-left-item">New York, United States</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">Graphic Designer</h4>
+                <span class="apply__card-left-item">New York, United States</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">Fleet Supervisor</h4>
+                <span class="apply__card-left-item">Jakarta, Indonesia</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+            <div class="apply__card">
+              <div class="apply__card-left">
+                <h4 class="apply__card-left-title">UX Analyst</h4>
+                <span class="apply__card-left-item">London, United Kingdom</span>
+              </div>
+              <a href="#" class="btn">Apply</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download">
+        <div class="container">
+          <div class="download">
+            <div class="download__left">
+              <h2>Sign up and Scoot off today</h2>
+            </div>
+            <div class="download__right">
+              <a href="#">
+                <img src="./images/appstore.svg" alt="AppStore" />
+              </a>
+              <a href="#">
+                <img src="./images/google-play.svg" alt="Google Play" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <img
+          class="download__circles"
+          src="./images/download-circles.svg"
+          alt="Circles"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer__menu">
+          <img
+            class="footer__menu-logo"
+            src="./images/icons/logo-light.svg"
+            alt="Scoot logo"
+          />
+          <div class="footer__menu-bar">
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">About</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Location</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Careers</a>
+              </li>
+            </ul>
+            <div class="footer__menu-contacts">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

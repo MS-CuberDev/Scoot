@@ -81,6 +81,9 @@ a {
   .about-hero {
     background-image: url("../images/about-bg@2x.jpg");
   }
+  .careers-hero {
+    background-image: url("../images/content-bg@2x.jpg");
+  }
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -239,6 +242,21 @@ nav {
     padding-bottom: 210px;
   }
 }
+.hero-slider {
+  position: absolute;
+  right: 0;
+  bottom: 190px;
+}
+@media screen and (max-width: 898px) {
+  .hero-slider {
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .hero-slider {
+    display: none;
+  }
+}
 .hero__title {
   font-size: 56px;
   line-height: 56px;
@@ -341,6 +359,10 @@ nav {
   .about-hero img {
     display: none;
   }
+}
+
+.careers-hero {
+  background-image: url("../images/content-bg.jpg");
 }
 
 #order {
@@ -541,6 +563,10 @@ nav {
 
 .about-arrow-long {
   top: 250px;
+}
+
+.careers-useful-img {
+  width: 100%;
 }
 
 #download {
@@ -793,4 +819,37 @@ footer {
 }
 .faqs__flex-spoiler:hover {
   background-color: #fff4df;
+}
+
+.apply {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  gap: 25px;
+}
+.apply__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  background-color: #F2F5F9;
+}
+@media screen and (max-width: 535px) {
+  .apply__card {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+.apply__card-left-title {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07px;
+  color: #495567;
+  padding-bottom: 8px;
+}
+.apply__card-left-item {
+  font-size: 15px;
+  line-height: 25px;
+  color: #495567;
 }/*# sourceMappingURL=main.css.map */

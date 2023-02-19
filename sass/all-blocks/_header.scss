@@ -141,6 +141,20 @@ nav {
         padding-bottom: 210px;
     }
 
+    &-slider {
+        position: absolute;
+        right: 0;
+        bottom: 190px;
+
+        @include for-hero {
+            bottom: 50px;
+        }
+        
+        @include for-mobile {
+            display: none;
+        }
+    }
+
     &__title {
         @include heading-one();
         color: #fff;
@@ -238,4 +252,8 @@ nav {
             display: none;
         }
     }
+}
+
+.careers-hero {
+    background-image: url('../images/content-bg.jpg');
 }
