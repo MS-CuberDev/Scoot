@@ -1,0 +1,88 @@
+.faqs {
+    padding-top: 150px;
+
+    &__title {
+        @include heading-two();
+        color: $dark-navy;
+        padding-bottom: 65px;
+        text-align: center;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include for-download {
+            flex-direction: column;
+        }
+
+        &:last-child {
+            padding-top: 65px;
+        }
+
+        &-title {
+            @include heading-three();
+            color: $dark-navy;
+
+            @include for-download {
+                margin: 0 auto 32px;
+            }
+        }
+
+        &-spoilers {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 730px;
+            width: 100%;
+        }
+
+        &-spoiler {
+            background-color: $snow;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 32px 40px 32px;
+                gap: 20px;
+
+                &-title {
+                    @include heading-four();
+                    color: $dark-navy;
+                }
+
+                &-arrow {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    border-bottom: 4px solid $yellow;
+                    border-right: 4px solid $yellow;
+                    rotate: -135deg;
+                    transition: 0.2s ease;
+
+                    &.spoiler-arrow-open {
+                        rotate: 45deg;
+                    }
+                }
+            }
+
+            &-description {
+                @include text();
+                color: $dark-navy;
+                padding: 0px 40px 32px;
+
+                &.spoiler-text-hide {
+                    display: none;
+                }
+            }
+        }
+
+        &-spoiler:hover {
+            background-color: #fff4df;
+        }
+    }
+}

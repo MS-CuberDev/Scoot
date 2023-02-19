@@ -17,13 +17,14 @@ function menuBarClose() {
   html.classList.remove('lock');
 }
 
-let className = "scroll-nav";
-const scrollTrigger = 820;
+const spoilerHead = document.querySelectorAll("[data-name='spoiler-head']");
+const spoilerArrow = document.querySelectorAll("#spoiler-arrow-open");
 
-window.onscroll = function() {
-  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
-    document.getElementsByTagName("nav")[0].classList.add(className);
-  } else {
-    document.getElementsByTagName("nav")[0].classList.remove(className);
-  }
-};
+spoilerHead.forEach(function (item) {
+  item.addEventListener("click", spoilerClick);
+});
+
+function spoilerClick() {
+  this.nextElementSibling.classList.toggle("spoiler-text-hide");
+  spoilerArrow.classList.toggle("spoiler-arrow-open");
+}
